@@ -1,0 +1,4 @@
+.elements {
+    max-width: calc(1280px - 200px*2);
+    margin: 51px auto 0;
+}
