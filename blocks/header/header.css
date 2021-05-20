@@ -1,10 +1,10 @@
 .header {
     display: flex;
-    width: 880px;
     flex-direction: column;
-    padding-top: 45px;
-    margin: 0 auto;
+    padding: 45px 0 41px;
+    margin: 0 auto 36px;
     max-width: calc(1280px - 200px*2);
+    border-bottom: 1px solid rgba(84, 84, 84, 0.7);
 }
 
 @media screen and (max-width: 1023px) {
@@ -17,7 +17,13 @@
 @media screen and (max-width: 540px) {
     .header {
         width: calc(100% - 27px*2);
-        padding-left: 28px;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+    .header {
+        width: 100%;
     }
 
 }

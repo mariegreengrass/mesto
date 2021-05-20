@@ -13,7 +13,7 @@
 
 @media screen and (max-width: 1023px) {
     .elements__list {
-        grid-template-columns: repeat(2, 282px);
+        grid-template-columns: repeat(auto-fit, 282px);
         grid-template-rows: repeat(3, 361px);
         width: calc(100% - 100px*2);
     }
@@ -21,7 +21,7 @@
 
 @media screen and (max-width: 760px) {
     .elements__list {
-        grid-template-columns: repeat(2, 282px);
+        grid-template-columns: repeat(auto-fit, 282px);
         grid-template-rows: repeat(3, 361px);
         width: calc(100% - 80px*2);
         gap: 20px;
@@ -31,7 +31,7 @@
 
 @media screen and (max-width: 540px) {
     .elements__list {
-        grid-template-columns: 282px;
+        grid-template-columns: repeat(auto-fit, 282px);
         width: calc(100% - 120px*2);
         gap: 20px;
     }

@@ -8,9 +8,20 @@
   </head>
   <body>
       <div class="root">
+          <div class="popup">
+              <div class="popup__container">
+                  <h2 class="popup__header">Редактировать профиль</h2>
+                  <fieldset class="popup__input-container">
+                      <input class="popup__item popup__item_heading" type="text" value="Жак-Ив Кусто">
+                      <input class="popup__item popup__item_rank" type="text" value="Исследователь океана">
+                  </fieldset>
+                  <fieldset class="popup__handler">
+                    <input class="popup__button" type="submit" value="Сохранить">
+                  </fieldset>
+              </div>
+          </div>
           <header class="header">
               <img class="header__logo" src="images/logo.svg" alt="Логотип Место" />
-              <hr class="header__line" />
           </header>
           <main class="content">
               <section class="profile">
@@ -19,9 +30,9 @@
                       <div class="profile__sub-info">
                           <div class="profile__text">
                               <h1 class="profile__header">Жак-Ив Кусто</h1>
-                              <p class="profile__rank">Исследователь океана</p>
+                              <button class="profile__edit-button"></button>
                           </div>
-                          <button class="profile__edit-button"></button>
+                          <p class="profile__rank">Исследователь океана</p>
                       </div>
                   </div>
                   <button class="profile__add-button"></button>
@@ -31,7 +42,7 @@
                       <li class="element">
                           <img class="element__image" src="/images/Viikki.png" alt="Район Хельсинки Виикки" />
                           <div class="element__info">
-                              <h2 class="element__header">Viikki</h2>
+                              <h2 class="element__header">Viikin Luonnonsuojelualue</h2>
                               <div class="element__like-button"></div>
                           </div>
                       </li>
