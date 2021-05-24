@@ -11,3 +11,12 @@
     bottom: 0;
     right: -42px;
 }
+
+@media screen and (max-width: 320px) {
+    .profile__edit-button {
+        width: 18px;
+        height: 18px;
+        right: -26px;
+    }
+
+}

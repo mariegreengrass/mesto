@@ -5,3 +5,13 @@
     line-height: 22px;
     margin: 0;
 }
+
+@media screen and (max-width: 320px) {
+    .profile__rank {
+        margin: 0 auto 36px;
+        font-size: 14px;
+        line-height: 17px;
+        height: 14px;
+    }
+
+}

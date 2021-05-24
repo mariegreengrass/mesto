@@ -6,3 +6,23 @@
     margin: 0;
     height: 39px;
 }
+
+
+@media screen and (max-width: 761px) {
+    .profile__header {
+        width: calc(100% - 71px*2);
+    }
+}
+
+
+@media screen and (max-width: 540px) {
+    .profile__header {
+        width: 100%;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 27px;
+        line-height: 33px;
+        margin-top: 26px;
+        height: 26px;
+    }
+}
