@@ -1,10 +1,13 @@
 .profile__text {
     margin: 0 0 16px;
-    position: relative;
+    display: flex;
+    align-items: baseline;
 }
 
 @media screen and (max-width: 1023px) {
     .profile__text {
         margin: 0 0 14px;
+        position: relative;
+        display: block;
     }
 }
