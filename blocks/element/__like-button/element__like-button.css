@@ -3,4 +3,13 @@
     width: 22px;
     height: 19px;
     align-self: center;
+    cursor: pointer;
+}
+
+.element__like-button:hover {
+    background-image: url(/images/like-button-hover.svg);
+}
+
+.element__like-button:active {
+    background-image: url(/images/like-button-active.svg);
 }

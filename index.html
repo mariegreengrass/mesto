@@ -9,19 +9,15 @@
   <body>
       <div class="root">
           <div class="popup">
-              <div class="popup__container">
+              <form class="popup__container">
                   <h2 class="popup__header">Редактировать профиль</h2>
                   <fieldset class="popup__input-container">
                       <input class="popup__item popup__item_heading" type="text" value="Жак-Ив Кусто">
                       <input class="popup__item popup__item_rank" type="text" value="Исследователь океана">
                   </fieldset>
-                  <fieldset class="popup__handler">
-                    <input class="popup__button" type="submit" value="Сохранить">
-                  </fieldset>
-                  <fieldset class="popup__close-button">
-                      <input class="popup__close-button" type="button">
-                  </fieldset>
-              </div>
+                    <button class="popup__button" type="submit">Сохранить</button>
+                  <a href="#" class="popup__close-button"></a>
+                </form>
           </div>
           <header class="header">
               <img class="header__logo" src="images/logo.svg" alt="Логотип Место" />
@@ -91,5 +87,34 @@
               <div class=footer__copyright>© 2020 Mesto Russia</div>
           </footer>
       </div>  
-  </body>          
+  </body>
+  <script>
+    let popupWindow = document.querySelector('.popup');
+    let editButton = document.querySelector('.profile__edit-button');
+    let closeButton = document.querySelector('.popup__close-button');
+
+    editButton.addEventListener('click', () => {
+        popupWindow.classList.add('popup_opened')
+    });
+    closeButton.addEventListener('click', () => {
+        popupWindow.classList.remove('popup_opened')
+    });
+  </script>
+  <script>
+    let form = document.querySelector('.popup__container');
+    let nameInput = document.querySelector('.popup__item_heading');
+    let jobInput = document.querySelector('.popup__item_rank');
+    let profileHeader = document.querySelector('.profile__header');
+    let profileRank = document.querySelector('.profile__rank');
+    
+    function formSubmitHandler (evt) {
+        evt.preventDefault();
+        profileHeader.textContent = nameInput.value;
+        profileRank.textContent = jobInput.value;
+    }
+    form.addEventListener('submit', formSubmitHandler);
+    form.addEventListener('submit', () => {
+        popupWindow.classList.remove('popup_opened')
+    });
+  </script>   
 </html>

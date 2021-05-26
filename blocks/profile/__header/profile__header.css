@@ -8,14 +8,7 @@
 }
 
 
-@media screen and (max-width: 761px) {
-    .profile__header {
-        width: calc(100% - 71px*2);
-    }
-}
-
-
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 1023px) {
     .profile__header {
         width: 100%;
         font-style: normal;
