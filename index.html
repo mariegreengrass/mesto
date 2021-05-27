@@ -9,15 +9,15 @@
   <body>
       <div class="root">
           <div class="popup">
-              <form class="popup__container">
+              <div class="popup__container">
                   <h2 class="popup__header">Редактировать профиль</h2>
-                  <fieldset class="popup__input-container">
-                      <input class="popup__item popup__item_heading" type="text" value="Жак-Ив Кусто">
-                      <input class="popup__item popup__item_rank" type="text" value="Исследователь океана">
-                  </fieldset>
-                    <button class="popup__button" type="submit">Сохранить</button>
-                  <a href="#" class="popup__close-button"></a>
+                  <form class="popup__form" name="profile">
+                      <input class="popup__item popup__item_type_name" type="text" value="Жак-Ив Кусто" name="profileHeader">
+                      <input class="popup__item popup__item_type_rank" type="text" value="Исследователь океана" name="profileRank">
+                      <button class="popup__button" type="submit">Сохранить</button>
                 </form>
+                  <button class="popup__close-button" type="button"></button>
+                </div>
           </div>
           <header class="header">
               <img class="header__logo" src="./images/logo.svg" alt="Логотип Место" />
@@ -41,52 +41,52 @@
                       <li class="element">
                           <img class="element__image" src="./images/Viikki.png" alt="Район Хельсинки Виикки" />
                           <div class="element__info">
-                              <h2 class="element__header">Viikin Luonnonsuojelualue</h2>
-                              <div class="element__like-button"></div>
+                              <h2 lang="fi" class="element__header">Viikin Luonnonsuojelualue</h2>
+                              <button class="element__like-button" type="button"></button>
                           </div>
                       </li>
                       <li class="element">
                           <img class="element__image" src="./images/Vanhakaupunki.png" alt="Район Хельсинки Ванхакаупунки" />
                           <div class="element__info">
-                              <h2 class="element__header">Vanhakaupunki</h2>
-                              <div class="element__like-button"></div>
+                              <h2 lang="fi" class="element__header">Vanhakaupunki</h2>
+                              <button class="element__like-button" type="button"></button>
                           </div>
                       </li>
                       <li class="element">
                           <img class="element__image" src="./images/Haaga.png" alt="Район Хельсинки Хаага" />
                           <div class="element__info">
-                              <h2 class="element__header">Haaga</h2>
-                              <div class="element__like-button"></div>
+                              <h2 lang="fi" class="element__header">Haaga</h2>
+                              <button class="element__like-button" type="button"></button>
                             </div>
                         </li>
                        <li class="element">
                            <img class="element__image" src="./images/Kruununhaka.png" alt="Район Хельсинки Круунунхака" />
                            <div class="element__info">
-                               <h2 class="element__header">Kruununhaka</h2>
-                               <div class="element__like-button"></div>
+                               <h2 lang="fi" class="element__header">Kruununhaka</h2>
+                               <button class="element__like-button" type="button"></button>
                             </div>
                         </li>
                         <li class="element">
                             <img class="element__image" src="./images/Lauttasaari.png" alt="Район Хельсинки Лауттасаари" />
                             <div class="element__info">
-                                <h2 class="element__header">Lauttasaari</h2>
-                                <div class="element__like-button"></div>
+                                <h2 lang="fi" class="element__header">Lauttasaari</h2>
+                                <button class="element__like-button" type="button"></button>
                             </div>
                         </li>
                         <li class="element">
                             <img class="element__image" src="./images/Nuuksio.png" alt="Заповедник Нууксио" />
                             <div class="element__info">
-                                <h2 class="element__header">Nuuksio</h2>
-                                <div class="element__like-button"></div>
+                                <h2 lang="fi" class="element__header">Nuuksio</h2>
+                                <button class="element__like-button" type="button"></button>
                             </div>
                         </li>
                   </ul>
               </section>
           </main>
           <footer class="footer">
-              <div class=footer__copyright>© 2020 Mesto Russia</div>
+              <p class="footer__copyright">© 2020 Mesto Russia</p>
           </footer>
       </div>  
+    <script src="./scripts/index.js"></script>  
   </body>
-  <script src="./scripts/index.js"></script>
 </html>
