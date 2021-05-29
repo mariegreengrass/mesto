@@ -3,12 +3,10 @@
     flex-direction: column;
     margin-left: 30px;
     justify-content: center;
-    max-width: 500px;
 }
 
 @media screen and (max-width: 1023px) {
     .profile__sub-info {
         margin: 0 auto;
-        max-width: 240px;
     }
 }

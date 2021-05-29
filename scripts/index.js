@@ -8,13 +8,11 @@ editButton.addEventListener('click', () => {
     jobInput.value = profileRank.textContent;
 
 });
-closeButton.addEventListener('click', () => {
-    closePopup();
 
-});
 function closePopup () {
     popupWindow.classList.remove('popup_opened')
 }
+closeButton.addEventListener('click', closePopup);
 
 let form = document.querySelector('.popup__form');
 let nameInput = document.querySelector(".popup__item_type_name");

@@ -8,6 +8,8 @@
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
+    padding: 0;
+    background-color: transparent;
     margin-top: 4px;
 }
 
