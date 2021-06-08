@@ -14,7 +14,6 @@ let profileRank = document.querySelector('.profile__rank');
 const addButton = document.querySelector('.profile__add-button');
 const popupAdd = document.querySelector('.popup_type_new-card');
 const popupImage = document.querySelector('.popup_type_image');
-const imageThumbnail = document.querySelector('.element__image');
 
 
 editButton.addEventListener('click', () => {
@@ -74,7 +73,9 @@ const initialCards = [
     }
   ]; 
 
+
 initialCards.forEach(function (element) {
+
     const cardTemplate = document.querySelector('#initialCard').content;
     const cardElement = cardTemplate.querySelector('.element').cloneNode(true);
 
@@ -87,16 +88,23 @@ initialCards.forEach(function (element) {
 
     cardElement.querySelector('.element__cart-button').addEventListener('click', function (evt) {
       evt.target.closest('.element').remove();
-      console.log('I did it');
     })
 
     cardsContainer.append(cardElement);
 
-    cardElement.querySelector('.element__image').addEventListener('click', () => {
-      popupImage.classList.add('popup_opened')
+    cardElement.addEventListener('click', (e) => {
+      popupImage.querySelector('.popup__full-image').src =
+        e.target.closest('.element__image').src;
+      popupImage.classList.add('popup_opened');
     });
-    popupImage.querySelector('.popup__image-description').textContent = element.name;
-    popupImage.querySelector('.popup__full-image').src = element.link;
+
+    cardElement.addEventListener('click', (e) => {
+      popupImage.querySelector('.popup__image-description').textContent =
+      e.target.closest(element.name);
+      console.log('dfdfd');
+      popupImage.classList.add('popup_opened');
+    })
+
 
 
   }
@@ -104,6 +112,7 @@ initialCards.forEach(function (element) {
 
 function formSubmitAddCard (evt) {
     evt.preventDefault();
+
     const cardTemplate = document.querySelector('#initialCard').content;
     const cardElement = cardTemplate.querySelector('.element').cloneNode(true);
 
@@ -113,7 +122,6 @@ function formSubmitAddCard (evt) {
 
     cardElement.querySelector('.element__cart-button').addEventListener('click', function (evt) {
       evt.target.closest('.element').remove();
-      console.log('I did it');
     })
 
     cardElement.querySelector('.element__image').src = newCardImage.value;
@@ -123,10 +131,5 @@ function formSubmitAddCard (evt) {
 
     closePopup();
 
-    cardElement.querySelector('.element__image').addEventListener('click', () => {
-      popupImage.classList.add('popup_opened')
-    });
-    popupImage.querySelector('.popup__image-description').textContent = element.name;
-    popupImage.querySelector('.popup__full-image').src = element.link;
 }
 formItem.addEventListener('submit', formSubmitAddCard);
