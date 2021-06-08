@@ -11,3 +11,7 @@
     right: 15px;
     top: 18px;
 }
+
+.element__cart-button:hover {
+    opacity: 0.6;
+}
