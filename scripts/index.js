@@ -41,13 +41,13 @@ closeButtonList.forEach((closeButton) => {
   });
 }); 
 
-function formSubmitHandler (evt) {
+function submitFormProfile (evt) {
     evt.preventDefault();
     profileHeader.textContent = nameInput.value;
     profileRank.textContent = jobInput.value;
     closePopup(profilePopup);
 }
-profileForm.addEventListener('submit', formSubmitHandler);
+profileForm.addEventListener('submit', submitFormProfile);
 
 const initialCards = [
     {
