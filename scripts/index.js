@@ -2,12 +2,12 @@ const editButton = document.querySelector('.profile__edit-button');
 const closeButton = document.querySelectorAll('.popup__close-button');
 const popup = document.querySelectorAll('.popup');
 const cardsContainer = document.querySelector('.elements__list');
-const newCardName = document.querySelector('.popup__item_type_card-name');
-const newCardImage = document.querySelector('.popup__item_type_card-image');
+const newCardName = document.querySelector('.popup__input_type_card-name');
+const newCardImage = document.querySelector('.popup__input_type_card-image');
 const cardForm = document.querySelector('.popup__form_new-item');
 const profileForm = document.querySelector('.popup__form_profile');
-const nameInput = document.querySelector(".popup__item_type_name");
-const jobInput = document.querySelector(".popup__item_type_rank");
+const nameInput = document.querySelector(".popup__input_type_name");
+const jobInput = document.querySelector(".popup__input_type_rank");
 const profileHeader = document.querySelector('.profile__header');
 const profileRank = document.querySelector('.profile__rank');
 const addButton = document.querySelector('.profile__add-button');
@@ -17,8 +17,7 @@ const newCardPopup = document.querySelector('.popup_type_new-card');
 const imagePopup = document.querySelector('.popup_type_image');
 
 function openPopup(popup) {
-  popup.classList.toggle('popup_opened');
-  console.log('i did it');
+  popup.classList.add('popup_opened');
 }
 addButton.addEventListener('click', () => openPopup(newCardPopup))
 
@@ -28,7 +27,7 @@ function openProfilePopup() {
   jobInput.value = profileRank.textContent;
   
 }
-editButton.addEventListener('click', () => openPopup(profilePopup))
+editButton.addEventListener('click', openProfilePopup)
 
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
@@ -79,18 +78,6 @@ const initialCards = [
 
 const cardTemplate = document.querySelector('#initialCard');
 
-
-/**function createCard(data) {
-  const card = ...
-  // ...
-  return card;
-}
-
-function renderCard(card) {
-  container.prepend(card);
-} **/
-
-
 function createCard(element) {
   const card = cardTemplate.content.cloneNode(true);
 
@@ -106,20 +93,20 @@ function createCard(element) {
     })
 
   card.querySelector('.element__image').addEventListener('click', (e) => {
-      popupImage.querySelector('.popup__full-image').src =
+      imagePopup.querySelector('.popup__full-image').src =
         e.target.closest('.element__image').src;
-      popupImage.querySelector('.popup__image-description').textContent =
+      imagePopup.querySelector('.popup__image-description').textContent =
         e.target.closest('.element__image').parentNode.textContent;
       openPopup(imagePopup);
     });
 
-    return card;
+  return card;
 
   }
 
-  function renderCard(card) {
+function renderCard(card) {
     cardsContainer.prepend(card);
-  }
+}
 
 initialCards.forEach((element) => {
   renderCard(createCard(element));
